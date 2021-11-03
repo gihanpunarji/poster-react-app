@@ -33,7 +33,7 @@ function PostView() {
                             <PostImage src={user.postImgUrl} />
                             <PostFooter>
                                 <Buttons>
-                                    <img src="https://img.icons8.com/material-outlined/24/000000/filled-like.png"/>
+                                    <img src="https://img.icons8.com/material-outlined/24/000000/filled-like.png" />
                                     <img src="https://img.icons8.com/material-outlined/24/000000/speech-bubble.png" onClick={() => commentInput()} />
                                 </Buttons>
                                 <img src="https://img.icons8.com/material-outlined/24/000000/share.png"/>
@@ -125,6 +125,10 @@ const PostFooter = styled.div`
 
     img{
         cursor: pointer;
+        transition: .25s all;
+        :hover {
+            transform: scale(1.15);
+        }
     }
 
 `
@@ -132,6 +136,10 @@ const Buttons = styled.div`
     img {
         margin-right: 10px;
         cursor: pointer;
+        transition: .25s all;
+        :hover {
+            transform: scale(1.15);
+        }
     }
 `
 
