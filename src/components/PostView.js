@@ -30,6 +30,10 @@ function PostView() {
                                 </Details>
                                 <span style={{fontSize: 22}}>...</span>
                             </PostHeader>
+                            <Caption>
+                                <span>user_name</span>
+                                <span style={{fontWeight: 600}}>- caption</span>
+                            </Caption>
                             <PostImage src={user.postImgUrl} />
                             <PostFooter>
                                 <Buttons>
@@ -57,7 +61,7 @@ function PostView() {
 
 
 const Container = styled.div`
-    margin: 20px auto;
+    margin: calc(120px - 50px) auto;
     max-width: 1280px;
     width: 40%;
     background-color: #fff;
@@ -98,7 +102,8 @@ const Details = styled.div`
     img{
         border-radius: 50%;
         height: 35px;
-        width: 305x;
+        width: 35px;
+        object-fit: cover;
     }
 
 `
@@ -113,6 +118,10 @@ const PostImage = styled.img`
         width: 100%;
         object-fit: cover;
     }
+`
+
+const Caption = styled.div`
+    margin: -4px 2px 8px 8px;
 `
 
 const PostFooter = styled.div`

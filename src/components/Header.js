@@ -19,11 +19,16 @@ function Header() {
 
 const Container = styled.div`
   background-color: #fff;
+  width: 100%;
   height: 50px;
   font-size: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: fixed;
+  transition: all .25s;
+  top: 0;
+  
 `
 
 const Logo = styled.div`
@@ -51,6 +56,10 @@ const Menu = styled.img`
     border-radius: 50%;
     height: 35px;
     width: 35px;
+    transition: all .25s;
+    :hover{
+        transform: scale(1.15);
+    }
     
     @media (max-width: 1280px) {
         margin: 10px;
